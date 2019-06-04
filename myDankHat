@@ -1,17 +1,12 @@
 #!/bin/bash 
 echo 'gang shit'
-sudo ./square -D0  & sleep 5
-sudo killall square
-sudo ./scrolling -f main.bdf -C 255,255,255 "Class of 2019" & sleep 5 
-sudo killall scrolling
-sudo ./imageView pong.gif wavyCity.gif mario.gif
-
+sudo utils/led-image-viewer 
 while true 
 do 
 	sudo ./square -D0 & sleep 5
 	sudo killall square 
 
-	sudo ./scrolling -f main.bdf -C 255,255,255 "Class of 2019" & sleep 5
+	sudo ./scrolling -f Fonts/main.bdf -C 255,255,255 "Class of 2019" & sleep 5
 	sudo killall scrolling 
 
 	sudo ./imageView -f pong.gif wavyCity.gif mario.gif & sleep 10 
